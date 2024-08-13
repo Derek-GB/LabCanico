@@ -26,13 +26,8 @@ public class VehicleList {
         vehicles.removeIf(veh -> veh.getTuition() == tuition);
     }
     
-    public Vehicle findVehicleByTuition(String tuition) {
-        for (Vehicle vehicle : vehicles) {
-            if (vehicle.getTuition().equals(tuition)) {
-                return vehicle;
-            }
-        }
-        return null;
+    public ArrayList<Vehicle> ListVehicle() {
+        return vehicles;
     }
     
 }
