@@ -5,7 +5,11 @@
 package Clients;
 
 import Vehicles.Vehicle;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+
 
 /**
  *
@@ -25,13 +29,11 @@ public class MechanicalClientList {
         this.clientVehicle.put(client, vehicle);
     }
     
-    public Vehicle search (Client client){
-       if(clientVehicle.containsKey(client)){
-           return clientVehicle.get(client);
-       } 
-           return null;
+    public List<Vehicle> listAllVehicles() {
+        Collection<Vehicle> vehiclesCollection = clientVehicle.values();
+        return new ArrayList<>(vehiclesCollection);
     }
-
+      
     public void remove(Client client) {
         clientVehicle.remove(client);
     }

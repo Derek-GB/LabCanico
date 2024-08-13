@@ -17,20 +17,20 @@ public class MechanicList {
         this.list = new HashSet();
     }
     
-     public void agregarProductos(Mechanic elements) {
+     public void add(Mechanic elements) {
         this.list.add(elements);
 
     }
 
-    public void eliminarProductos(String elements) {
+    public void remove(String elements) {
         this.list.removeIf(mechanic -> mechanic.getId().equals(elements));
 
     }
 
-    public Mechanic buscarProductos(Mechanic elements) {
+    public Mechanic search(String elements) {
         for (Mechanic mechanic : list) {
             if (mechanic.getId().equals(elements)) {
-                return elements;
+                return mechanic;
             }
 
         }
