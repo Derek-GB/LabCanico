@@ -21,6 +21,10 @@ public class RepairList {
     public Repair finish(){
         return list.poll();
     }
+    
+    public Repair seeFirst(){
+        return list.peek();
+    }
 
     public RepairList() {
         this.list = new LinkedList<>();

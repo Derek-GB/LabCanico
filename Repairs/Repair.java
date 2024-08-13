@@ -4,6 +4,8 @@
  */
 package Repairs;
 
+import Mechanics.Mechanic;
+import Vehicles.Vehicle;
 import java.time.LocalDate;
 
 /**
@@ -61,7 +63,7 @@ public class Repair {
     }
     
     public Repair() {
-        this("",new Vehicle(), new Mechanic(), new LocalDate(),"");
+        this("",new Vehicle(), new Mechanic(), LocalDate.now(),"");
     }
     
 }
