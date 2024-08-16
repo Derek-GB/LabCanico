@@ -113,7 +113,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehiculoActionPerformed
-        // TODO add your handling code here:
+        FrmVehicle frm = new FrmVehicle(this,true);
+        frm.setVisible(true);
     }//GEN-LAST:event_btnVehiculoActionPerformed
 
     private void btnMecanicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMecanicoActionPerformed
