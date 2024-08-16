@@ -4,6 +4,11 @@
  */
 package GUI;
 
+import Clients.MechanicalClientList;
+import Mechanics.MechanicList;
+import Repairs.RepairList;
+import Vehicles.VehicleList;
+
 
 /**
  *
@@ -15,8 +20,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
      * Creates new form FrmPrincipal
      */
     
+    MechanicalClientList clientList;
+    MechanicList mechanicList;
+    RepairList repairList;
+    VehicleList vehicleList;
+    
     public FrmPrincipal() {
         initComponents();
+        clientList=new MechanicalClientList();
+        mechanicList= new MechanicList();
+        repairList= new RepairList();
+        vehicleList= new VehicleList();
     }
 
     /**
