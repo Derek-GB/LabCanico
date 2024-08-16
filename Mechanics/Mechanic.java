@@ -45,7 +45,7 @@ public class Mechanic {
 
     @Override
     public String toString() {
-        return "Mecanico:" + "id=" + id + ", nombre = " + name + ", especialidad = " + specialty + "  ";
+        return "-Mecanico ID " + id + " -Nombre " + name + " -Especialidad en" + specialty;
     }
 
 

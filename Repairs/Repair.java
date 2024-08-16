@@ -40,8 +40,12 @@ public class Repair {
         return description;
     }
 
-    public boolean getState() {
+    public boolean isState() {
         return state;
+    }
+    
+    public String getState(){
+        return state? "Pendiente" : "Finalizado";
     }
 
     public void setState(boolean state) {
@@ -50,7 +54,7 @@ public class Repair {
 
     @Override
     public String toString() {
-        return "Repair{" + "id=" + id + ", vehicle=" + vehicle + ", mechanic=" + mechanic + ", date=" + date + ", description=" + description + ", state=" + state + '}';
+        return "-Reparacion ID " + id + "\n" + vehicle + "\n" + mechanic + "\n -Fecha " + date + "\n -Descripcion " + description + " -Estado " + getState();
     }
 
     public Repair(String id, Vehicle vehicle, Mechanic mechanic, LocalDate date, String description) {
