@@ -46,6 +46,11 @@ public class Vehicle {
     public Vehicle() {
         this("","","",LocalDate.now());
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" + "tuition=" + tuition + ", model=" + model + ", brand=" + brand + ", yearManufacture=" + yearManufacture + '}';
+    }
     
     
     

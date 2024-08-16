@@ -8,6 +8,7 @@ import Vehicles.Vehicle;
 import Vehicles.VehicleList;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 /**
  *
@@ -26,6 +27,7 @@ public class FrmVehicle extends javax.swing.JDialog {
     public FrmVehicle(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.VehicleList=new VehicleList();
     }
 
     /**
@@ -74,6 +76,12 @@ public class FrmVehicle extends javax.swing.JDialog {
         Y.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         Y.setForeground(new java.awt.Color(0, 0, 0));
         Y.setText("Year Manufacture");
+
+        txtYear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtYearActionPerformed(evt);
+            }
+        });
 
         btnadd.setText("Add");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
@@ -200,10 +208,14 @@ public class FrmVehicle extends javax.swing.JDialog {
     }//GEN-LAST:event_btnremoveActionPerformed
 
     private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
-        FrmListVehicle frm=new FrmListVehicle(null,true);
+        FrmListaVehicle frm=new FrmListaVehicle(null,true,VehicleList);
           frm.setLocationRelativeTo(null);
          frm.setVisible(true);
     }//GEN-LAST:event_btnsearchActionPerformed
+
+    private void txtYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtYearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtYearActionPerformed
 
     /**
      * @param args the command line arguments
