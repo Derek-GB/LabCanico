@@ -27,11 +27,11 @@ public class FrmClient extends javax.swing.JDialog {
     /**
      * Creates new form FrmClient
      */
-    public FrmClient(java.awt.Frame parent, boolean modal) {
+    public FrmClient(java.awt.Frame parent, boolean modal, MechanicalClientList list,VehicleList listVehicle) {
         super(parent, modal);
         initComponents();
-        this.list=new MechanicalClientList();
-        this.listVehicle=new VehicleList();
+        this.list=list;
+        this.listVehicle=listVehicle;
         cargar();
     }
 

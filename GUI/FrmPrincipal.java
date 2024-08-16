@@ -128,7 +128,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRepairActionPerformed
 
     private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
-         FrmClient repairs = new FrmClient(this,true);
+         FrmClient repairs = new FrmClient(this,true,clientList,vehicleList);
         repairs.setVisible(true);
     }//GEN-LAST:event_btnClienteActionPerformed
 
