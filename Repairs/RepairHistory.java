@@ -4,6 +4,7 @@
  */
 package Repairs;
 
+import java.util.Iterator;
 import java.util.Stack;
 
 /**
@@ -17,8 +18,8 @@ public class RepairHistory {
         historial.add(element);
     }
     
-    public Object[] getHistorial(){
-        return historial.toArray();
+    public Iterator<Repair> getHistorial(){
+        return historial.iterator();
     }
     
     public RepairHistory(){

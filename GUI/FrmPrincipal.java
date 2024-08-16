@@ -6,6 +6,7 @@ package GUI;
 
 import Clients.MechanicalClientList;
 import Mechanics.MechanicList;
+import Repairs.RepairHistory;
 import Repairs.RepairList;
 import Vehicles.VehicleList;
 
@@ -20,10 +21,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
      * Creates new form FrmPrincipal
      */
     
-    MechanicalClientList clientList;
-    MechanicList mechanicList;
-    RepairList repairList;
-    VehicleList vehicleList;
+    private MechanicalClientList clientList;
+    private MechanicList mechanicList;
+    private RepairList repairList;
+    private VehicleList vehicleList;
+    private RepairHistory repairHistorial;
     
     public FrmPrincipal() {
         initComponents();
@@ -31,6 +33,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mechanicList= new MechanicList();
         repairList= new RepairList();
         vehicleList= new VehicleList();
+        repairHistorial = new RepairHistory();
     }
 
     /**
@@ -124,7 +127,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMecanicoActionPerformed
 
     private void btnRepairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepairActionPerformed
-        FrmRepair repairs = new FrmRepair(this,true);
+        FrmRepair repairs = new FrmRepair(this,true,repairList,repairHistorial);
         repairs.setVisible(true);
     }//GEN-LAST:event_btnRepairActionPerformed
 

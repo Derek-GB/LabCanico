@@ -35,7 +35,7 @@ public class FrmHistorial extends javax.swing.JDialog {
         txtLista = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Lista de pedidos");
+        setTitle("Historial de Reparaciones");
 
         txtLista.setEditable(false);
         txtLista.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N

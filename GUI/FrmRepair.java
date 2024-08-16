@@ -11,6 +11,7 @@ import Repairs.RepairList;
 import Vehicles.Vehicle;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
 
 /**
  *
@@ -18,16 +19,18 @@ import java.time.format.DateTimeFormatter;
  */
 public class FrmRepair extends javax.swing.JDialog {
 
-    private RepairList list = new RepairList();
-    private RepairHistory historial = new RepairHistory();
+    private RepairList list;
+    private RepairHistory historial;
     private java.awt.Frame parent;
 
     /**
      * Creates new form FrmTienda
      */
-    public FrmRepair(java.awt.Frame parent, boolean modal) {
+    public FrmRepair(java.awt.Frame parent, boolean modal, RepairList list, RepairHistory historial) {
         super(parent, modal);
         this.parent = parent;
+        this.list = list;
+        this.historial = historial;
         initComponents();
     }
 
@@ -49,9 +52,10 @@ public class FrmRepair extends javax.swing.JDialog {
 
     private String getHistorial() {
         String history = "";
-        for (Object repair : historial.getHistorial()) {
-            history += repair.toString() + "\n --------------------- \n";
-        }
+        Iterator<Repair> repairs = this.historial.getHistorial();
+        while (repairs.hasNext()){
+            history += repairs.next() + "\n --------------------- \n";
+        } 
         return history;
     }
 

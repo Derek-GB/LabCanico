@@ -54,7 +54,7 @@ public class Repair {
 
     @Override
     public String toString() {
-        return "-Reparacion ID " + id + "\n" + vehicle + "\n" + mechanic + "\n -Fecha " + date + "\n -Descripcion " + description + " -Estado " + getState();
+        return "-Reparacion ID " + id + "\n" + vehicle + "\n" + mechanic + "\n -Fecha " + date + "\n -Descripcion " + description + "\n -Estado " + getState();
     }
 
     public Repair(String id, Vehicle vehicle, Mechanic mechanic, LocalDate date, String description) {
