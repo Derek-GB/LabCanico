@@ -97,7 +97,6 @@ public class FrmRepair extends javax.swing.JDialog {
         jLabel2.setText("Vehicle");
 
         txtId.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtId.setText("0");
         txtId.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,14 +114,12 @@ public class FrmRepair extends javax.swing.JDialog {
 
         txtNuevo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        txtVehicle.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         txtVehicle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtVehicleActionPerformed(evt);
             }
         });
 
-        txtMechanical.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         txtMechanical.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMechanicalActionPerformed(evt);
@@ -277,6 +274,7 @@ public class FrmRepair extends javax.swing.JDialog {
         if (repair !=null){
             txtId.setText(String.valueOf(repair.getId()));
             txtDescription.setText(repair.getDescription());
+            this.historial.add(repair);
         }
     }//GEN-LAST:event_btnAtenderActionPerformed
 
