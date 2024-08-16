@@ -4,6 +4,7 @@
  */
 package GUI;
 
+
 /**
  *
  * @author Fernando
@@ -13,6 +14,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form FrmPrincipal
      */
+    
     public FrmPrincipal() {
         initComponents();
     }
@@ -112,7 +114,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRepairActionPerformed
 
     private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
-        // TODO add your handling code here:
+         FrmClient repairs = new FrmClient(this,true);
+        repairs.setVisible(true);
     }//GEN-LAST:event_btnClienteActionPerformed
 
     /**
