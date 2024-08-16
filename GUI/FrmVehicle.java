@@ -195,15 +195,15 @@ public class FrmVehicle extends javax.swing.JDialog {
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void btnremoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremoveActionPerformed
-        String tuitonText = txtTuiton.getText();
-        if (!tuitonText.isEmpty()) {
+        String tuitionText = txtTuiton.getText();
+        if (!tuitionText.isEmpty()) {
                 String tuition = txtTuiton.getText();
                 VehicleList.removeVehicle(tuition);
                 javax.swing.JOptionPane.showMessageDialog(this, "Vehiculo eliminado correctamente.");
        
             }
         
-      this.dispose();
+      
            
     }//GEN-LAST:event_btnremoveActionPerformed
 

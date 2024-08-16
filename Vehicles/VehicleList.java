@@ -23,7 +23,7 @@ public class VehicleList {
     }
     
     public void removeVehicle(String tuition) {
-        vehicles.removeIf(veh -> veh.getTuition() == tuition);
+        vehicles.removeIf(veh -> veh.getTuition().equals(tuition));
     }
     
     public ArrayList<Vehicle> ListVehicle() {
